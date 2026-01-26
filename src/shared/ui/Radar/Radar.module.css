@@ -22,7 +22,7 @@
     inset: 0;
     border: 1px solid rgba(255, 255, 255);
     border-radius: 50%;
-    /*opacity: 0;*/
+    opacity: 0;
     animation: anima 3s linear infinite;
 }
 
