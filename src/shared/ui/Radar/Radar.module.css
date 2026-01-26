@@ -22,12 +22,14 @@
     border: 1px solid rgba(63, 213, 144, 0.6);
     border-radius: 50%;
     opacity: 0;
-    animation: anima 6s linear infinite;
+    animation: anima 6s  linear   infinite;
     z-index: 10;
 }
 
 
 @keyframes anima {
-    0%   { transform: scale(0.3); opacity: 1; }
+    0%   { transform: scale(0.3); opacity: 0; }
+    25%   { opacity: .5; }
+    50%   { opacity: 1; }
     100% { transform: scale(1);  opacity: 0; }
 }
