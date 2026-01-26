@@ -1,5 +1,7 @@
 :root {
     --primary-color: #fff;
+    --secondary-color: #7F9F9C;
+    --green: #3FD590;
 }
 
 body {
@@ -29,4 +31,24 @@ body::after {
     flex-direction: column;
     gap: 24px;
     padding: 24px ;
+}
+
+h2, h3, h4 {
+    font-weight: 300;
+}
+
+h2 span, h3 span, h4 span {
+    color: var(--secondary-color);
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 18px;
 }

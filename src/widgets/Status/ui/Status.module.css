@@ -1,0 +1,41 @@
+.status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 300;
+    margin-top: 316px;
+}
+
+.status.first {
+    margin-top: 10px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--secondary-color);
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.circle {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+}
+
+
+.green {
+    color: var(--green);
+}
+
+.orange {
+    color: #F2A01C;
+}
+

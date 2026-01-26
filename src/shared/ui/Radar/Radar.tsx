@@ -6,21 +6,19 @@ import cls from './Radar.module.css';
 
 interface RadarProps {
   className?: string;
-  waves?: number;
 }
 
 export const Radar = ({
   className,
   children,
-  waves = 3,
 }: PropsWithChildren<RadarProps>) => {
 
-  const arr = Array.from({length: waves});
+  const arr = Array.from({length: 3});
   return (
     <div className={cn(cls.radar, [className])}>
       {arr.map((_, index) => (
-          <span key={index} className={cls.circle} style={{
-            animationDelay: `${(3 / waves) * index}s`,
+          <span key={index} className={cls.wave} style={{
+            animationDelay: `${index}s`,
           }} />
         ))}
 

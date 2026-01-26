@@ -1,5 +1,5 @@
 interface Mods {
-  [key: string]: boolean;
+  [key: string]: boolean | undefined;
 }
 
 export function cn(

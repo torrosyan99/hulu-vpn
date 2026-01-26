@@ -1,0 +1,31 @@
+.menu {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.button {
+    width: calc(50% - 6px);
+}
+
+.setting {
+    width: 100%;
+    position: relative;
+    z-index: 11;
+}
+
+.message {
+    max-width: 212px;
+    position: absolute;
+    padding: 10px 16px;
+    background: #15B780;
+    border-radius: 12px;
+    top: -48px;
+    left: 66px;
+}
+
+.polygon {
+    position: absolute;
+    bottom: -7px;
+    left: 20px;
+}

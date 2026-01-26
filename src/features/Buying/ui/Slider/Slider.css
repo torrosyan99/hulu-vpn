@@ -1,0 +1,16 @@
+.slider {
+    padding: 16px 24px;
+    border-radius: 100px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.rc-slider-step {
+    height: 12px;
+}
+.rc-slider-dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    opacity: 1;
+}

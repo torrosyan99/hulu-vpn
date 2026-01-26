@@ -2,10 +2,9 @@
     width: 400px;
     height: 400px;
     position: absolute;
-    top: 30px;
+    top: 39px;
     left: 50%;
     transform: translateX(-50%);
-
     z-index: -1;
 }
 
@@ -17,18 +16,18 @@
 }
 
 
-.circle {
+.wave {
     position: absolute;
     inset: 0;
-    border: 1px solid rgba(255, 255, 255);
+    border: 1px solid #FFFFFFB2;
     border-radius: 50%;
     opacity: 0;
     animation: anima 3s linear infinite;
+    z-index: 10;
 }
 
 
 @keyframes anima {
-    0%   { transform: scale(0.3); opacity: .6; }
-    /*15%  { opacity: 1; }*/
-    100% { transform: scale(1); opacity: 0; }
+    0%   { transform: scale(0.3); opacity: 1; }
+    100% { transform: scale(1);  opacity: 0; }
 }

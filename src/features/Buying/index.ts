@@ -1,0 +1,1 @@
+export {Buying} from './ui/Buying/Buying.tsx'
