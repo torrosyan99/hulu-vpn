@@ -1,0 +1,12 @@
+.button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    padding: 12px;
+    background: linear-gradient(44deg, #131e23 0%, #203940 100%);
+}
+
+.arrow {
+    margin-left: auto;
+}
