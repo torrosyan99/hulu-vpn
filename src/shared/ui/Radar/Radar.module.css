@@ -19,7 +19,7 @@
 .wave {
     position: absolute;
     inset: 0;
-    border: 1px solid #3FD590;
+    border: 1px solid rgba(63, 213, 144, 0.6);
     border-radius: 50%;
     opacity: 0;
     animation: anima 6s linear infinite;
