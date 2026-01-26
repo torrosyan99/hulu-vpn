@@ -18,7 +18,7 @@ export const Radar = ({
     <div className={cn(cls.radar, [className])}>
       {arr.map((_, index) => (
           <span key={index} className={cls.wave} style={{
-            animationDelay: `${index}s`,
+            animationDelay: `${(6 / 3) * index}s`,
           }} />
         ))}
 

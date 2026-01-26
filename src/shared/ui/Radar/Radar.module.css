@@ -19,10 +19,10 @@
 .wave {
     position: absolute;
     inset: 0;
-    border: 1px solid #FFFFFFB2;
+    border: 1px solid #3FD590;
     border-radius: 50%;
     opacity: 0;
-    animation: anima 3s linear infinite;
+    animation: anima 6s linear infinite;
     z-index: 10;
 }
 
