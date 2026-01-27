@@ -8,16 +8,12 @@ import 'rc-slider/assets/index.css';
 import './Slider.css';
 import {Text} from "@/shared/ui/Text/Text.tsx";
 import {Message} from "@/shared/ui/Message/Message.tsx";
+import {useFeedback} from "@/shared/hooks/useFeedback/useFeedback.tsx";
 
 interface SliderProps {
   setState: (state: string) => void;
 }
 
-const vibrate = (pattern: number | number[]) => {
-  if ('vibrate' in navigator) {
-    navigator.vibrate(pattern);
-  }
-};
 const marks:{[key:number]:string} = {
   0: '1',
   20: '2',
@@ -28,11 +24,12 @@ const marks:{[key:number]:string} = {
 };
 export const Slider = ({setState}:SliderProps) => {
   const [value, setValue] = useState(0);
+  const {click} = useFeedback()
 
   const handleChange = (value: number | number[]) => {
     if (typeof value === 'number') {
       setValue(value);
-      vibrate(10)
+      click()
       setState(marks[value]);
     }
   };

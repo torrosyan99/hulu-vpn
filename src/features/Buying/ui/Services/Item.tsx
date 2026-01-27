@@ -7,12 +7,9 @@ import { cn } from '@/shared/lib/cn/cn.ts';
 import { Box } from '@/shared/ui/Box/Box.tsx';
 
 import cls from './Services.module.css';
+import {useFeedback} from "@/shared/hooks/useFeedback/useFeedback.tsx";
 
-const vibrate = (pattern: number | number[]) => {
-  if ('vibrate' in navigator) {
-    navigator.vibrate(pattern);
-  }
-};
+
 export const Item = ({
   title,
   price,
@@ -24,11 +21,13 @@ export const Item = ({
   onClick: () => void;
 }) => {
   const sp = useRef<HTMLSpanElement>(null);
+    const {click} = useFeedback()
   const timerRef = useRef<ReturnType<typeof window.setTimeout> | null>(null);
   const myOnClick = (e: MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
+
     onClick();
-    vibrate(10)
+    click()
     if (timerRef.current) {
       window.clearTimeout(timerRef.current);
       timerRef.current = null;
