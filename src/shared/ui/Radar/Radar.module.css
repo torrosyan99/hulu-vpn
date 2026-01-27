@@ -15,7 +15,6 @@
     transform: translate(-50%, -50%);
 }
 
-
 .wave {
     position: absolute;
     inset: 0;
@@ -25,7 +24,6 @@
     animation: anima 6s  linear   infinite;
     z-index: 10;
 }
-
 
 @keyframes anima {
     0%   { transform: scale(0.3); opacity: 0; }

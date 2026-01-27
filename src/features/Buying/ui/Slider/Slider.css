@@ -1,16 +1,60 @@
 .slider {
-    padding: 16px 24px;
+    padding: 16px 28px;
     border-radius: 100px;
     background: rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
-.rc-slider-step {
-    height: 12px;
+.rc-slider-mark-text {
+    display: none;
 }
+
+.rc-slider-rail {
+    background: transparent;
+}
+
+.rc-slider-track {
+    background: linear-gradient(135.00deg, rgba(62.56, 213.32, 143.59, 1) 0%, rgba(0, 168, 120, 1) 100%) no-repeat;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .rc-slider-dot {
     width: 12px;
     height: 12px;
     background: rgba(255, 255, 255, 0.08);
+    bottom: -4px;
     border: none;
-    opacity: 1;
+}
+
+.slider .rc-slider-dot-active,
+.slider .rc-slider-handle {
+    width: 12px;
+    height: 12px;
+    border: none;
+    box-shadow: none;
+    background: linear-gradient(135.00deg, rgba(62.56, 213.32, 143.59, 1) 0%, rgba(0, 168, 120, 1) 100%) no-repeat;
+}
+
+.slider .rc-slider-dot-active:after,
+.slider .rc-slider-handle:after {
+    content: '';
+    position: absolute;
+    inset: -5.8px;
+    z-index: -1;
+    border: 6px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+
+.slider .rc-slider-handle {
+    margin-top: -4px;
+}
+
+.slider .rc-slider-handle:hover, .slider .rc-slider-handle:active,
+.slider .rc-slider-handle:focus,
+.slider .rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging{
+    box-shadow: none;
+    border: none;
 }

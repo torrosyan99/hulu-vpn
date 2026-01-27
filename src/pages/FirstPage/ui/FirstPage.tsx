@@ -7,7 +7,7 @@ export const FirstPage = () => {
   return (
     <>
       <div className={cls.bg} />
-      <Status type={'first'} />
+      <Status type={'trial'} />
       <Menu first={true} />
     </>
   );

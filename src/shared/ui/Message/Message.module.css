@@ -1,0 +1,29 @@
+.message {
+    max-width: 212px;
+    position: absolute;
+    padding: 10px 16px;
+    border-radius: 12px;
+
+}
+
+.message.green {
+    background: #15B780;
+}
+
+.message.gray {
+    background: rgba(32, 59, 67, 1);
+}
+
+.polygon {
+    position: absolute;
+}
+
+.message.green .polygon {
+    bottom: -7px;
+    left: 20px;
+}
+
+.message.gray .polygon {
+    top: -7px;
+    left: 20px;
+}

@@ -1,15 +1,16 @@
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 import { PagePaths } from '@/shared/config/routerConfig/routerConfig.tsx';
 import { Button } from '@/shared/ui/Button/Button.tsx';
 
-import PolygonSvg from '@icons/polygon-bottom.svg?react';
 import SettingsSvg from '@icons/settings.svg?react';
 import ShieldPlusIcon from '@icons/shield-plus.svg?react';
 import SupportSvg from '@icons/support.svg?react';
 import UserSvg from '@icons/user.svg?react';
 
 import cls from './Menu.module.css';
+import {Message} from "@/shared/ui/Message/Message.tsx";
 
 interface MenuProps {
   first?: boolean;
@@ -17,16 +18,20 @@ interface MenuProps {
 
 export const Menu = ({ first }: MenuProps) => {
   return (
-    <div className={cls.menu}>
+    <motion.div
+      className={cls.menu}
+      initial={!first && { y: 24, opacity: 0 }}
+      animate={!first && { y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+    >
       <Button type={'green'} Icon={<ShieldPlusIcon />} end={'от 240₽'}>
         Купить подписку
       </Button>
       <div className={cls.setting}>
         {first && (
-          <p className={cls.message}>
+          <Message className={cls.message} type={'green'}>
             Сначала нужно настроить VPN на вашем устройстве
-            <PolygonSvg className={cls.polygon} />
-          </p>
+          </Message>
         )}
         <Button
           as={Link}
@@ -43,6 +48,6 @@ export const Menu = ({ first }: MenuProps) => {
       <Button className={cls.button} Icon={<SupportSvg />}>
         Поддержка
       </Button>
-    </div>
+    </motion.div>
   );
 };

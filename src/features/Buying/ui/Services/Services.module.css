@@ -1,0 +1,81 @@
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.activeBox {
+    background: linear-gradient(220deg,rgba(89, 229, 165, 0.3),rgba(0, 0, 0, .2))/* Предупреждение: градиент использует вращение, не поддерживаемое CSS, и может работать не так, как ожидается. */,rgba(0, 0, 0, 0.15);
+}
+
+.item {
+    width: calc(50% - 6px);
+    font-weight: 300;
+    padding: 18px 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.itemTop {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 49px;
+    position: relative;
+}
+.title {
+    transition: .2s all linear;
+}
+
+.active .title {
+    transform: translateX(18px);
+}
+
+.circle {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    background: linear-gradient(135.00deg, rgba(62.56, 213.32, 143.59, 1) 0%, rgba(0, 168, 120, 1) 100%);
+    border-radius: 50%;
+    transition: .2s all linear;
+    opacity: 0;
+}
+
+.active .circle {
+    opacity: 1;
+}
+
+.price {
+    font-size: 22px;
+}
+
+.monthPrice {
+    color: var(--secondary-color);
+    display: block;
+    margin-top: 4px;
+}
+
+
+.sp {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: .6;
+    background: rgba(255, 255, 255, 0.22);
+    transition: 520ms all ease-out;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+
+.activeSp {
+    animation: ripple 800ms ease-out;
+}
+
+@keyframes ripple {
+    from { transform: translate(-50%, -50%) scale(0); opacity: .6; }
+    to   { transform: translate(-50%, -50%) scale(12); opacity: 0; }
+}

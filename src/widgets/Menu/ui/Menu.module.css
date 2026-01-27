@@ -15,17 +15,6 @@
 }
 
 .message {
-    max-width: 212px;
-    position: absolute;
-    padding: 10px 16px;
-    background: #15B780;
-    border-radius: 12px;
     top: -48px;
     left: 66px;
-}
-
-.polygon {
-    position: absolute;
-    bottom: -7px;
-    left: 20px;
 }
