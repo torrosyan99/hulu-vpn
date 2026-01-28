@@ -6,6 +6,7 @@ import mir from '@/shared/assets/images/mir.png';
 import sberPay from '@/shared/assets/images/sber-pay.png';
 import sbp from '@/shared/assets/images/sbp.png';
 import tPay from '@/shared/assets/images/t-pay.png';
+import { motionProps } from '@/shared/config/motion/presets.ts';
 import { cn } from '@/shared/lib/cn/cn.ts';
 import { Box } from '@/shared/ui/Box/Box.tsx';
 import { Button } from '@/shared/ui/Button/Button.tsx';
@@ -13,28 +14,17 @@ import { Button } from '@/shared/ui/Button/Button.tsx';
 import CardSvg from '@icons/card.svg?react';
 
 import cls from './Payment.module.css';
-import {motionProps} from "@/shared/config/motion/presets.ts";
 
-const payment = [
-  {
-    src: tPay,
-    title: 'T-Pay',
-  },
-  {
-    src: sberPay,
-    title: 'SberPay',
-  },
-  {
-    src: sbp,
-    title: 'СБП',
-  },
-  {
-    src: mir,
-    title: 'Карта',
-  },
-];
+interface Payment {
+  title: string;
+  src: string;
+}
 
-export const Payment = () => {
+interface PaymentProps {
+  payment: Payment[];
+}
+
+export const Payment = ({ payment }: PaymentProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (

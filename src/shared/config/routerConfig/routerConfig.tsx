@@ -5,8 +5,8 @@ import { HomePage } from '@/pages/HomePage';
 import { InstallationPage } from '@/pages/InstallationPage';
 import { ProfilePage } from '@/pages/ProfilePage';
 import { SubscriptionPage } from '@/pages/SubscriptionPage';
-import {PaymentPage} from "@/pages/PaymentPage/ui/PaymentPage.tsx";
-
+import {PaymentPage} from "@/pages/PaymentPage";
+import {PaymentWithoutPage} from "@/pages/PaymentPage/ui/PaymentWithoutPage.tsx";
 export enum PagePaths {
   HOMEPAGE = '/',
   SUBSCRIPTION = '/subscription',
@@ -28,4 +28,5 @@ export const routerConfig: AppRoute[] = [
   { path: PagePaths.INSTALLATION, element: <InstallationPage /> },
   { path: PagePaths.PROFILE, element: <ProfilePage /> },
   { path: PagePaths.PAYMENT, element: <PaymentPage /> },
+  { path: '/payment-without' as PagePaths, element: <PaymentWithoutPage /> },
 ];
