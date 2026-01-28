@@ -1,7 +1,7 @@
 import { Menu } from '@/widgets/Menu';
 import { Status } from '@/widgets/Status';
 
-import { FreeVpn } from '@/features/FreeVpn';
+import { FreeVpn } from '@/widgets/FreeVpn';
 
 import WorldMapSvg from '@icons/world-map.svg?react';
 

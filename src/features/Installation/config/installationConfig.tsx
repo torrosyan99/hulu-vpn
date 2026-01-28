@@ -18,6 +18,8 @@ export const installationConfig = (
   activeButton: 'first' | 'second',
   setActiveButton: Dispatch<SetStateAction<'first' | 'second'>>,
 ) => {
+  const firstGreenPulseButton = activeButton === 'first' ? 'green-pulse' : 'green'
+  const secondPulseButton = activeButton === 'second' ? 'pulse' : 'none'
   return [
     {
       title: 'Настройка на iOS',
@@ -45,7 +47,7 @@ export const installationConfig = (
       buttons: [
         <Button
           key="download-app"
-          variant={activeButton === 'first' ? 'green-pulse' : 'green'}
+          variant={firstGreenPulseButton}
           center
           onClick={() => {
             setActiveButton('second');
@@ -59,7 +61,7 @@ export const installationConfig = (
           key="next-step-app"
           as="button"
           center
-          variant={activeButton === 'second' ? 'pulse' : 'none'}
+          variant={secondPulseButton}
           onClick={() => {
             setActiveButton('first');
             setState((v) => v + 1);
@@ -77,7 +79,7 @@ export const installationConfig = (
       buttons: [
         <Button
           key="add-subscription"
-          variant={activeButton === 'first' ? 'green-pulse' : 'green'}
+          variant={firstGreenPulseButton}
           onClick={() => {
             setActiveButton('second');
           }}
@@ -91,7 +93,7 @@ export const installationConfig = (
         <Button
           key="next-step-subscription"
           as="button"
-          variant={activeButton === 'second' ? 'pulse' : 'none'}
+          variant={secondPulseButton}
           center
           onClick={() => setState((v) => v + 1)}
         >
