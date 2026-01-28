@@ -9,4 +9,14 @@
     align-items: center;
     font-weight: 300;
     justify-content: space-between;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.icon {
+    flex-shrink: 0;
+}
+
+.text {
+    overflow: hidden;
 }

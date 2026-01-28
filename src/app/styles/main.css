@@ -33,7 +33,12 @@ body::after {
     padding: 24px ;
 }
 
-h2, h3, h4 {
+.body-overflow {
+    height: 100dvh;
+    overflow-y: hidden;
+}
+
+h2, h3, h4,h5, h6 {
     font-weight: 300;
 }
 
@@ -51,4 +56,12 @@ h3 {
 
 h4 {
     font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 14px;
 }

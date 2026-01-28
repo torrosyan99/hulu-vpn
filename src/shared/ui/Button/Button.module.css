@@ -4,6 +4,8 @@
     border-radius: 12px;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    text-align: start;
     gap: 8px;
     font-size: 16px;
     background: linear-gradient(270deg, rgba(9, 175, 124, 0.08), rgba(0, 0, 0, 0));
@@ -13,6 +15,7 @@
 
 .button.center {
     justify-content: center;
+    text-align: center;
 }
 
 .button.green {
@@ -30,7 +33,6 @@
 }
 
 .end {
-    font-size: 14px;
     font-weight: 300;
     margin-left: auto;
     color: var(--green);

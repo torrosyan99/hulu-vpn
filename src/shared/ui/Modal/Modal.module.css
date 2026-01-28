@@ -1,0 +1,33 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    z-index: 150;
+    overflow-y: auto;
+}
+
+.content {
+    width: 100%;
+    position: relative;
+    padding: 18px 24px;
+    margin: auto 0;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: #1b2222;
+    background-image:linear-gradient(225deg, rgba(89, 199, 229, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.close {
+    position: absolute;
+    top: 19px;
+    right: 24px;
+}

@@ -10,15 +10,15 @@ interface CopyProps {
   text: string;
 }
 
-export const Copy = ({ text }: CopyProps) => {
+export const  Copy = ({ text }: CopyProps) => {
   const { onClick, checked } = useCopy(text);
   return (
     <div className={cls.copy} onClick={onClick}>
-      <span>{text}</span>
+      <span className={cls.text}>{text}</span>
       <ChangeIcon
         bool={checked}
-        firstIcon={<CopySvg width={20} height={20} stroke="white" />}
-        secondIcon={<CheckSvg stroke="white" />}
+        firstIcon={<CopySvg className={cls.icon}  width={20} height={20} stroke="white" />}
+        secondIcon={<CheckSvg className={cls.icon}  stroke="white" />}
       />
     </div>
   );

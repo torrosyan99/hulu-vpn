@@ -1,0 +1,30 @@
+.switcher {
+    width: 48px;
+    height: 24px;
+    padding: 1.5px 10px 1.5px 9px ;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #606D69;
+    border-radius: 74.25px;
+}
+
+.circle {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    left: 1.5px;
+    top: 1.5px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    transition: .2s all linear;
+}
+
+.switcher.on {
+    background: #09AF7C;
+}
+
+.switcher.on .circle {
+    left: calc(100% - 22.5px);
+}

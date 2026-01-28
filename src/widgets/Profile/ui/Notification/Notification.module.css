@@ -1,0 +1,16 @@
+.text {
+    margin-top: 12px;
+}
+
+.switchers {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
