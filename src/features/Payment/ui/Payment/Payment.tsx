@@ -2,10 +2,6 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import mir from '@/shared/assets/images/mir.png';
-import sberPay from '@/shared/assets/images/sber-pay.png';
-import sbp from '@/shared/assets/images/sbp.png';
-import tPay from '@/shared/assets/images/t-pay.png';
 import { motionProps } from '@/shared/config/motion/presets.ts';
 import { cn } from '@/shared/lib/cn/cn.ts';
 import { Box } from '@/shared/ui/Box/Box.tsx';
