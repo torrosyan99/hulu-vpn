@@ -32,6 +32,16 @@ const transaction = [
     date: '24 ноября 2025 ',
     price:'199₽'
   }
+  ,  {
+    title: '1 месяц 1 устройство',
+    date: '24 ноября 2025 ',
+    price:'199₽'
+  }
+  ,  {
+    title: '1 месяц 1 устройство',
+    date: '24 ноября 2025 ',
+    price:'199₽'
+  }
 ];
 
 export const Transaction = () => {

@@ -1,18 +1,22 @@
 import type { Dispatch, SetStateAction } from 'react';
 import { Link } from 'react-router-dom';
 
+import { PagePaths } from '@/shared/config/routerConfig/routerConfig.tsx';
 import { Button } from '@/shared/ui/Button/Button.tsx';
 
 import ArrowRightSvg from '@icons/arrow-right-2.svg?react';
-import ButtonDownloadSvg from '@icons/download-2.svg?react';
-import ButtonPlusSvg from '@icons/plus-2.svg?react';
-import DownloadSvg from '@icons/download.svg?react';
-import SettingsSvg from '@icons/settings-1.svg?react';
-import PlusSvg from '@icons/plus.svg?react';
 import CheckSvg from '@icons/check.svg?react';
-import {PagePaths} from "@/shared/config/routerConfig/routerConfig.tsx";
+import ButtonDownloadSvg from '@icons/download-2.svg?react';
+import DownloadSvg from '@icons/download.svg?react';
+import ButtonPlusSvg from '@icons/plus-2.svg?react';
+import PlusSvg from '@icons/plus.svg?react';
+import SettingsSvg from '@icons/settings-1.svg?react';
+
 export const installationConfig = (
   setState: Dispatch<SetStateAction<number>>,
+  setModal: Dispatch<SetStateAction<boolean>>,
+  activeButton: 'first' | 'second',
+  setActiveButton: Dispatch<SetStateAction<'first' | 'second'>>,
 ) => {
   return [
     {
@@ -22,19 +26,14 @@ export const installationConfig = (
       buttons: [
         <Button
           key="install-this-device"
-          variant="green"
+          variant={'green-pulse'}
           as="button"
           center
           onClick={() => setState((v) => v + 1)}
         >
           Установка на этом устройстве
         </Button>,
-        <Button
-          key="install-other-device"
-          as={Link}
-          center
-          to="#"
-        >
+        <Button key="install-other-device" as={Link} center to="#">
           Установить на другом устройстве
         </Button>,
       ],
@@ -46,10 +45,12 @@ export const installationConfig = (
       buttons: [
         <Button
           key="download-app"
-          variant="green"
-          as={Link}
+          variant={activeButton === 'first' ? 'green-pulse' : 'green'}
           center
-          to="#"
+          onClick={() => {
+            setActiveButton('second');
+            setModal(true);
+          }}
         >
           <ButtonDownloadSvg />
           Установить
@@ -58,7 +59,11 @@ export const installationConfig = (
           key="next-step-app"
           as="button"
           center
-          onClick={() => setState((v) => v + 1)}
+          variant={activeButton === 'second' ? 'pulse' : 'none'}
+          onClick={() => {
+            setActiveButton('first');
+            setState((v) => v + 1);
+          }}
         >
           Далее
           <ArrowRightSvg />
@@ -72,7 +77,10 @@ export const installationConfig = (
       buttons: [
         <Button
           key="add-subscription"
-          variant="green"
+          variant={activeButton === 'first' ? 'green-pulse' : 'green'}
+          onClick={() => {
+            setActiveButton('second');
+          }}
           as={Link}
           center
           to="#"
@@ -83,6 +91,7 @@ export const installationConfig = (
         <Button
           key="next-step-subscription"
           as="button"
+          variant={activeButton === 'second' ? 'pulse' : 'none'}
           center
           onClick={() => setState((v) => v + 1)}
         >

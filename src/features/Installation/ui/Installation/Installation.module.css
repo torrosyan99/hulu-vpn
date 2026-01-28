@@ -14,3 +14,11 @@
     gap: 12px;
     margin-top: 36px;
 }
+
+.modal.modal {
+    margin-bottom: 30px;
+}
+
+.modalText {
+    margin-top: 12px;
+}
