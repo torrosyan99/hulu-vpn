@@ -35,19 +35,17 @@ export const Modal = ({
   useEffect(() => {
     if (!isOpen) return;
     const app = document.querySelector('.app');
-    if (app) {
-      app.classList.add('app-overflow');
+    if (app) app.classList.add('app-overflow');
 
-      const onKeyDown = (e: KeyboardEvent) => {
-        if (e.key === 'Escape') onClose();
-      };
-      window.addEventListener('keydown', onKeyDown);
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      if (app) app.classList.remove('app-overflow');
 
-      return () => {
-        app.classList.remove('body-overflow');
-        window.removeEventListener('keydown', onKeyDown);
-      };
-    }
+      window.removeEventListener('keydown', onKeyDown);
+    };
   }, [isOpen, onClose]);
 
   console.log(isOpen);
