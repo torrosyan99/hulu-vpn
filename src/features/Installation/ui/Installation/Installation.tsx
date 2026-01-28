@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useMemo, useState } from 'react';
 import Confetti from 'react-confetti';
 import { Link } from 'react-router-dom';
-import { useWindowSize } from 'react-use';
+import { useWindowSize } from '@/shared/hooks/useWindowSize/useWindowSize.tsx';
 
 import { motionProps } from '@/shared/config/motion/presets.ts';
 import { Button } from '@/shared/ui/Button/Button.tsx';

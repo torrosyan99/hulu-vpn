@@ -34,7 +34,7 @@ body::after {
 }
 
 .body-overflow {
-    height: 100dvh;
+    max-height: 100dvh;
     overflow-y: hidden;
 }
 
