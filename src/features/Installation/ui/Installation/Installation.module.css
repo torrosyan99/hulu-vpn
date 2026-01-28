@@ -1,0 +1,15 @@
+.info {
+    margin-top: auto;
+    text-align: center;
+}
+
+.text {
+    margin-top: 16px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 36px;
+}

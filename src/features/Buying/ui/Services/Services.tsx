@@ -5,14 +5,16 @@ import type { Service } from '../../types';
 
 import cls from './Services.module.css';
 
+interface ServicesProps extends Service {
+  setState: (index:number) => void;
+  index: number;
+}
+
 export const Services = ({
   prices,
   setState,
   index,
-}: Service & {
-  setState: (index: number) => void;
-  index: number;
-}) => {
+}:ServicesProps) => {
   return (
     <div className={cls.services}>
       {prices.map((price, i) => (

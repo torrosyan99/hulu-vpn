@@ -1,0 +1,41 @@
+.radar {
+    height: 400px;
+    position: relative;
+}
+
+.wave {
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wave.first {
+    width: 400px;
+    top: 0;
+    bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wave.second {
+    width: 300px;
+    top: 50px;
+    bottom: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.wave.last {
+    width: 200px;
+    top: 100px;
+    bottom: 100px;
+}
+
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+

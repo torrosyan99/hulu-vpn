@@ -1,0 +1,1 @@
+export {Installation} from './ui/Installation/Installation.tsx'

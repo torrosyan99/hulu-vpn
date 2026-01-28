@@ -1,5 +1,5 @@
-import { SubscriptionWidget } from '@/widgets/SubscriptionWidget';
+import {Buying} from "@/features/Buying";
 
 export const SubscriptionPage = () => {
-  return <SubscriptionWidget />;
+  return <Buying />;
 };

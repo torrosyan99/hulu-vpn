@@ -8,7 +8,7 @@ type ButtonProps<T extends ElementType> = {
   as?: T;
   className?: string;
   center?: boolean;
-  type?: 'none' | 'green';
+  variant?: 'none' | 'green';
   Icon?: ReactNode;
   end?: string;
 } & ComponentPropsWithoutRef<T>;
@@ -20,13 +20,13 @@ export const Button = <T extends ElementType>({
   center,
   Icon,
   end,
-  type = 'none',
+  variant = 'none',
   ...otherProps
 }: ButtonProps<T>) => {
   const Component = as || 'button';
   return (
     <Component
-      className={cn(cls.button, [className, cls[type]], {
+      className={cn(cls.button, [className, cls[variant]], {
         [cls.center]: center,
       })}
       {...otherProps}
