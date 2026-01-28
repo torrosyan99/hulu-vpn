@@ -34,18 +34,20 @@ export const Modal = ({
 }: PropsWithChildren<ModalProps>) => {
   useEffect(() => {
     if (!isOpen) return;
+    const app = document.querySelector('.app');
+    if (app) {
+      app.classList.add('app-overflow');
 
-    document.body.classList.add('body-overflow');
+      const onKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') onClose();
+      };
+      window.addEventListener('keydown', onKeyDown);
 
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-    };
-    window.addEventListener('keydown', onKeyDown);
-
-    return () => {
-      document.body.classList.remove('body-overflow');
-      window.removeEventListener('keydown', onKeyDown);
-    };
+      return () => {
+        app.classList.remove('body-overflow');
+        window.removeEventListener('keydown', onKeyDown);
+      };
+    }
   }, [isOpen, onClose]);
 
   console.log(isOpen);
