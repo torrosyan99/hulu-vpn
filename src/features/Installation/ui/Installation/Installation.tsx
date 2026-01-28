@@ -2,9 +2,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useMemo, useState } from 'react';
 import Confetti from 'react-confetti';
 import { Link } from 'react-router-dom';
-import { useWindowSize } from '@/shared/hooks/useWindowSize/useWindowSize.tsx';
 
 import { motionProps } from '@/shared/config/motion/presets.ts';
+import { useWindowSize } from '@/shared/hooks/useWindowSize/useWindowSize.tsx';
 import { Button } from '@/shared/ui/Button/Button.tsx';
 import { Modal } from '@/shared/ui/Modal/Modal.tsx';
 import { Text } from '@/shared/ui/Text/Text.tsx';
@@ -63,8 +63,12 @@ export const Installation = () => {
         <div className={cls.buttons}>{item.buttons}</div>
       </motion.div>
       {index === config.length - 1 && (
-        <Confetti width={width} height={height}    numberOfPieces={250}
-                  recycle={false} />
+        <Confetti
+          width={width}
+          height={height}
+          numberOfPieces={250}
+          recycle={false}
+        />
       )}
     </>
   );

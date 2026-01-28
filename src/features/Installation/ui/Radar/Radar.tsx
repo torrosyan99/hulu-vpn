@@ -5,6 +5,7 @@ import { cn } from '@/shared/lib/cn/cn.ts';
 
 import cls from './Radar.module.css';
 import 'react-circular-progressbar/dist/styles.css';
+import "./Radar.css"
 
 interface RadarProps {
   progress: number;
@@ -24,7 +25,7 @@ export const Radar = ({
             trailColor: 'rgba(255, 255, 255, 0.3)',
             pathColor: '#3FD590',
           })}
-          strokeWidth={0.5}
+          strokeWidth={2}
           value={progress}
         />
       </span>
