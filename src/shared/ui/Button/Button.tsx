@@ -8,7 +8,7 @@ type ButtonProps<T extends ElementType> = {
   as?: T;
   className?: string;
   center?: boolean;
-  variant?: 'none' | 'green';
+  variant?: 'none' | 'green' | 'gradient';
   Icon?: ReactNode;
   end?: string;
 } & ComponentPropsWithoutRef<T>;

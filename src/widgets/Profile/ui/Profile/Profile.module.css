@@ -1,3 +1,9 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 .top {
     display: flex;
     flex-direction: column;
@@ -5,4 +11,14 @@
     text-align: center;
     gap: 8px;
     padding-top: 21px;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.text {
+    font-weight: 300;
 }

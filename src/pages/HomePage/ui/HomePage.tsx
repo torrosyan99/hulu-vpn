@@ -11,7 +11,7 @@ export const HomePage = () => {
   return (
     <>
       <WorldMapSvg className={cls.svg} />
-      <FreeVpn />
+      <FreeVpn className={cls.freeVpn} />
       <Status type={'trial'} />
       <Menu />
     </>

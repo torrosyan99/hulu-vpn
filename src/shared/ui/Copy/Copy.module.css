@@ -1,0 +1,12 @@
+.copy {
+    width: 100%;
+    padding: 18px 24px;
+    border-radius: 12px;
+    background: linear-gradient(270deg, rgba(9, 175, 124, 0.08), rgba(0, 0, 0, 0));
+    border: 1px solid #36575D;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    justify-content: space-between;
+}

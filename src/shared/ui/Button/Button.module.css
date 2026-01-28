@@ -6,21 +6,27 @@
     align-items: center;
     gap: 8px;
     font-size: 16px;
-    font-weight: 500;
-    background: linear-gradient(270deg,rgba(9, 175, 124, 0.08),rgba(0, 0, 0, 0));
+    background: linear-gradient(270deg, rgba(9, 175, 124, 0.08), rgba(0, 0, 0, 0));
     border: 1px solid #36575D;
     color: var(--primary-color);
 }
-
 
 .button.center {
     justify-content: center;
 }
 
 .button.green {
+    font-weight: 500;
     background: linear-gradient(135deg, var(--green) 0%, #00a878 100%);
-    border: none ;
+    border: none;
+}
 
+.button.gradient {
+    background: linear-gradient(270deg,rgba(89, 198, 229, 0.1),rgba(0, 0, 0, .2));
+    border: none;
+    padding: 18px;
+    font-weight: 300;
+    gap: 12px;
 }
 
 .end {
