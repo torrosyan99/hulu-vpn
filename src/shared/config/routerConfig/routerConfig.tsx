@@ -5,6 +5,7 @@ import { HomePage } from '@/pages/HomePage';
 import { InstallationPage } from '@/pages/InstallationPage';
 import { ProfilePage } from '@/pages/ProfilePage';
 import { SubscriptionPage } from '@/pages/SubscriptionPage';
+import {PaymentPage} from "@/pages/PaymentPage/ui/PaymentPage.tsx";
 
 export enum PagePaths {
   HOMEPAGE = '/',
@@ -12,6 +13,7 @@ export enum PagePaths {
   FIRST_PAGE = '/first-page',
   INSTALLATION = '/installation',
   PROFILE = '/profile',
+  PAYMENT = '/payment',
 }
 
 interface AppRoute {
@@ -25,4 +27,5 @@ export const routerConfig: AppRoute[] = [
   { path: PagePaths.FIRST_PAGE, element: <FirstPage /> },
   { path: PagePaths.INSTALLATION, element: <InstallationPage /> },
   { path: PagePaths.PROFILE, element: <ProfilePage /> },
+  { path: PagePaths.PAYMENT, element: <PaymentPage /> },
 ];

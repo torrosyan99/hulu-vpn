@@ -1,0 +1,51 @@
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link {
+    font-weight: 300;
+    padding: 10px 16px;
+    border-radius: 12px;
+    color: var(--primary-color);
+    background: #203B43;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.box svg {
+    flex-shrink: 0;
+}
+
+.button {
+    padding: 24px;
+    position: relative;
+}
+
+.button.active {
+    background: rgba(0, 0, 0, 0.15) linear-gradient(213deg, rgba(89, 229, 165, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+.active::after {
+    content: "";
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135.00deg, rgba(62.56, 213.32, 143.59, 1) 0%,rgba(0, 168, 120, 1) 100%);
+}

@@ -11,7 +11,6 @@ import SettingsSvg from '@icons/settings-1.svg?react';
 import PlusSvg from '@icons/plus.svg?react';
 import CheckSvg from '@icons/check.svg?react';
 import {PagePaths} from "@/shared/config/routerConfig/routerConfig.tsx";
-
 export const installationConfig = (
   setState: Dispatch<SetStateAction<number>>,
 ) => {
@@ -22,14 +21,20 @@ export const installationConfig = (
       icon: <SettingsSvg />,
       buttons: [
         <Button
-          variant={'green'}
-          as={'button'}
-          center={true}
+          key="install-this-device"
+          variant="green"
+          as="button"
+          center
           onClick={() => setState((v) => v + 1)}
         >
           Установка на этом устройстве
         </Button>,
-        <Button as={Link} center={true} to={'#'}>
+        <Button
+          key="install-other-device"
+          as={Link}
+          center
+          to="#"
+        >
           Установить на другом устройстве
         </Button>,
       ],
@@ -39,13 +44,20 @@ export const installationConfig = (
       text: 'Установите приложение v2RayTun и вернитесь к этому экрану',
       icon: <DownloadSvg />,
       buttons: [
-        <Button variant={'green'} as={Link} center={true} to={'#'}>
+        <Button
+          key="download-app"
+          variant="green"
+          as={Link}
+          center
+          to="#"
+        >
           <ButtonDownloadSvg />
           Установить
         </Button>,
         <Button
-          as={'button'}
-          center={true}
+          key="next-step-app"
+          as="button"
+          center
           onClick={() => setState((v) => v + 1)}
         >
           Далее
@@ -58,13 +70,20 @@ export const installationConfig = (
       text: 'Добавьте подписку в приложение v2RayTun с помощью кнопки ниже',
       icon: <PlusSvg />,
       buttons: [
-        <Button variant={'green'} as={Link} center={true} to={'#'}>
+        <Button
+          key="add-subscription"
+          variant="green"
+          as={Link}
+          center
+          to="#"
+        >
           <ButtonPlusSvg />
           Добавить
         </Button>,
         <Button
-          as={'button'}
-          center={true}
+          key="next-step-subscription"
+          as="button"
+          center
           onClick={() => setState((v) => v + 1)}
         >
           Далее
@@ -78,8 +97,9 @@ export const installationConfig = (
       icon: <CheckSvg />,
       buttons: [
         <Button
+          key="finish-installation"
           as={Link}
-          center={true}
+          center
           to={PagePaths.HOMEPAGE}
         >
           Завершить настройку
