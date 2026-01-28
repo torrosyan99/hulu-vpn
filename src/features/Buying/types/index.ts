@@ -6,10 +6,10 @@ export interface Price {
   monthPrice: string;
 }
 
-export interface Service {
+export interface Prices {
   prices: Price[];
 }
 
 export interface Services {
-  [key: string]: Service
+  [key: string]: Prices
 }

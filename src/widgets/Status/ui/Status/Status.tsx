@@ -1,31 +1,22 @@
 import { motion } from 'framer-motion';
 
-import { cn } from '@/shared/lib/cn/cn.ts';
+import { motionProps } from '@/shared/config/motion/presets.ts';
 import { Box } from '@/shared/ui/Box/Box.tsx';
 
-import { getRadar } from '../lib/getRadar.tsx';
+import { getRadar } from '../../lib/getRadar.tsx';
 
 import cls from './Status.module.css';
 
 interface StatusProps {
-  type: 'warning' | 'trial' | 'first';
+  type: 'warning' | 'trial';
 }
 
 export const Status = ({ type }: StatusProps) => {
   return (
     <>
       {getRadar(type)}
-      <motion.div
-        className={cls.block}
-        initial={{ y: 24, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
-      >
-        <Box
-          className={cn(cls.status, [], {
-            [cls.first]: type === 'first',
-          })}
-        >
+      <motion.div className={cls.block} {...motionProps}>
+        <Box className={cls.status}>
           <div className={cls.item}>
             <h4>Hulu VPN</h4>
             <div className={cls.flex}>

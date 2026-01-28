@@ -1,20 +1,20 @@
 import RcSlider from 'rc-slider';
-import { useState } from 'react';
+import { type Dispatch, type SetStateAction, useState } from 'react';
 
+import { useFeedback } from '@/shared/hooks/useFeedback/useFeedback.tsx';
 import { Box } from '@/shared/ui/Box/Box.tsx';
+import { Message } from '@/shared/ui/Message/Message.tsx';
+import { Text } from '@/shared/ui/Text/Text.tsx';
 
-import cls from './Slider.module.css';
 import 'rc-slider/assets/index.css';
+import cls from './Slider.module.css';
 import './Slider.css';
-import {Text} from "@/shared/ui/Text/Text.tsx";
-import {Message} from "@/shared/ui/Message/Message.tsx";
-import {useFeedback} from "@/shared/hooks/useFeedback/useFeedback.tsx";
 
 interface SliderProps {
-  setState: (state: string) => void;
+  setState: Dispatch<SetStateAction<string>>;
 }
 
-const marks:{[key:number]:string} = {
+const marks: { [key: number]: string } = {
   0: '1',
   20: '2',
   40: '3',
@@ -22,14 +22,14 @@ const marks:{[key:number]:string} = {
   80: '7',
   100: '10',
 };
-export const Slider = ({setState}:SliderProps) => {
+export const Slider = ({ setState }: SliderProps) => {
   const [value, setValue] = useState(0);
-  const {click} = useFeedback()
+  const { click } = useFeedback();
 
   const handleChange = (value: number | number[]) => {
     if (typeof value === 'number') {
       setValue(value);
-      click()
+      click();
       setState(marks[value]);
     }
   };
@@ -53,7 +53,7 @@ export const Slider = ({setState}:SliderProps) => {
           onChange={handleChange}
           step={null}
         />
-        <Message className={cls.message} type={'gray'} >
+        <Message className={cls.message} type={'gray'}>
           Потяните, чтобы изменить
         </Message>
       </div>

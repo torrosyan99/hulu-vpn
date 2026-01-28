@@ -1,5 +1,5 @@
 import { Menu } from '@/widgets/Menu';
-import { Status } from '@/widgets/Status/ui/Status.tsx';
+import { Status } from '@/widgets/Status';
 
 import { FreeVpn } from '@/features/FreeVpn';
 

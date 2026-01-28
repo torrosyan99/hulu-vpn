@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useMemo, useState } from 'react';
 
+import { motionProps } from '@/shared/config/motion/presets.ts';
 import { Text } from '@/shared/ui/Text/Text.tsx';
 
 import { installationConfig } from '../../config/installationConfig.tsx';
@@ -17,7 +18,7 @@ export const Installation = () => {
   const item = config[index];
   return (
     <>
-      <Radar progress={(index  / config.length) * 100}>
+      <Radar progress={(index / (config.length - 1)) * 100}>
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={index}
@@ -30,12 +31,7 @@ export const Installation = () => {
           </motion.div>
         </AnimatePresence>
       </Radar>
-      <motion.div
-        className={cls.info}
-        initial={{ y: 24, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
-      >
+      <motion.div className={cls.info} {...motionProps}>
         <h3>{item.title}</h3>
         <Text className={cls.text}>{item.text}</Text>
         <div className={cls.buttons}>{item.buttons}</div>

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 import { PagePaths } from '@/shared/config/routerConfig/routerConfig.tsx';
+import { motionProps } from '@/shared/config/motion/presets.ts';
 import { Button } from '@/shared/ui/Button/Button.tsx';
 import { Message } from '@/shared/ui/Message/Message.tsx';
 
@@ -20,9 +21,9 @@ export const Menu = ({ first }: MenuProps) => {
   return (
     <motion.div
       className={cls.menu}
-      initial={!first && { y: 24, opacity: 0 }}
-      animate={!first && { y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+      initial={!first && motionProps.initial}
+      animate={!first && motionProps.animate}
+      transition={motionProps.transition}
     >
       <Button
         as={Link}
@@ -48,7 +49,12 @@ export const Menu = ({ first }: MenuProps) => {
           Установка и настройка
         </Button>
       </div>
-      <Button className={cls.button} Icon={<UserSvg />}>
+      <Button
+        className={cls.button}
+        as={Link}
+        to={PagePaths.PROFILE}
+        Icon={<UserSvg />}
+      >
         Профиль
       </Button>
       <Button className={cls.button} Icon={<SupportSvg />}>

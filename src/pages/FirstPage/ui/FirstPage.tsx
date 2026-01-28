@@ -1,5 +1,5 @@
 import { Menu } from '@/widgets/Menu';
-import { Status } from '@/widgets/Status/ui/Status.tsx';
+import { Status } from '@/widgets/Status';
 
 import cls from './FirstPage.module.css';
 

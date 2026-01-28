@@ -2,15 +2,12 @@
 .block {
     margin-top: auto;
 }
+
 .status {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: 300;
-}
-
-.status.first {
-    margin-top: 10px;
 }
 
 .flex {
