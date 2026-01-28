@@ -25,7 +25,7 @@ export const Radar = ({
             trailColor: 'rgba(255, 255, 255, 0.3)',
             pathColor: '#3FD590',
           })}
-          strokeWidth={2}
+          strokeWidth={1}
           value={progress}
         />
       </span>
